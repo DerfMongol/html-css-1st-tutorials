@@ -1,0 +1,47 @@
+<style type = "text/css">
+.important{
+	color: green; font-weight: bold;
+	}
+.ho{
+	margin-left: 20%;
+	background-color: pink;
+	width: 55%;
+    padding:1% 5% 15% 5%;
+	text-align: center;
+
+}
+
+.buy{
+	width: 20%;
+	height:0;
+	padding-bottom: 10%;
+	border-radius: 70%;
+	border:5px solid orange;
+	overflow:hidden;  
+	background: #4679BD; 
+
+	float:left;
+	text-align: center;
+	margin-left: 20%;
+	padding-top: 7%;
+	
+	
+}
+.sell{
+	width: 20%;
+	height:0;
+	padding-bottom: 10%;
+	border-radius: 70%;
+	border:5px solid orange;
+	overflow:hidden;  
+	background: #4679BD; 
+	
+	float:right;
+	text-align: center;
+	margin-right: 20%;
+	padding-top: 7%;
+
+	
+}
+
+ </style>

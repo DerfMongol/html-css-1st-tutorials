@@ -1,0 +1,52 @@
+
+p.primary {
+	color: red;
+	font-size: 300%;
+}
+
+p {
+	color: blue;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+.hide {
+	display: none;
+}
+
+li input{
+	display: none;
+}
+li.edit span {
+	display: none;
+
+}
+li.edit input {
+	display: initial;
+
+}
+#container{
+	width:90%;
+	margin:auto;
+	padding:10px;
+}
+#box2{
+	background: red;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	
+}
+
+#box{
+	background: #333;
+	color: #fff;
+	width: 500px;
+	height: 90px;
+	padding: 40px;
+	text-align: center;
+
+}

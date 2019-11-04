@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="jquery.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <title>
+        My Webpage
+    </title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Fun Time</h1>
+        <button class="panel-button" data-panelid="panel1">btn1</button>
+        <button class="panel-button" data-panelid="panel2">btn2</button>
+        <button class="panel-button" data-panelid="panel3">btn3</button>
+        <button class="panel-button" data-panelid="panel4">btn4</button>
+    </div>
+    <div id="container1">
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="panel1" class="myPanel">
+                    <div id="head1" class="heading">my header</div>
+                    <div class="body">
+                        <p>my body</p>
+                        <div class="showOnHover">
+                            <div id="danger">
+                                <a href="" class="btn btn-sm btn-danger">delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div id="panel2" class="myPanel">
+                    <div id="head2" class="heading">my header</div>
+                    <div class="body">
+                        <p>my body</p>
+                        <div class="showOnHover">
+                            <div id="danger">
+                                <a href="" class="btn btn-sm btn-danger">delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div id="panel3" class="myPanel">
+                    <div id="head3" class="heading">my header</div>
+                    <div class="body">
+                        <p>my body</p>
+                        <div class="showOnHover">
+                            <div id="danger">
+                                <a href="" class="btn btn-sm btn-danger">delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div id="panel4" class="myPanel">
+                    <div id="head4" class="heading">my header</div>
+                    <div class="body">
+                        <p>my body</p>
+                        <div class="showOnHover">
+                            <div id="danger">
+                                <a href="" class="btn btn-sm btn-danger">delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li><a href="index.html">index</a></li>
+        <li><a href="page3.html">page3</a></li>
+        <li><a href="page2.html">page2</a></li>
+        <li><a href="bootstrap.html">bootstrap</a></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    $(function() {
+        $('#panel1').hide(1000).delay(1500).slideDown(500);
+        $('#panel2').delay(1000).fadeToggle(1000).fadeToggle(2000);
+
+         $('.myPanel').mouseover(function(){
+            var panelId = $(this).attr('id');
+            if(panelId == 'panel1') {
+                 $('#'+panelId+' .heading').css({
+                    'color':'white',
+                    'background':'red'
+                 });
+             }
+             if(panelId == 'panel2') {
+                 $('#'+panelId+' .heading').css({
+                    'color':'white',
+                    'background':'orange'
+                 });
+             }
+             if(panelId == 'panel3') {
+                 $('#'+panelId+' .heading').css({
+                    'color':'black',
+                    'background':'yellow'
+                 });
+             }
+             if(panelId == 'panel4') {
+                 $('#'+panelId+' .heading').css({
+                    'color':'white',
+                    'background':'green'
+                 });
+             }
+         });
+
+
+         $('.panel-button').click(function() {
+            var panelId = $(this).attr('data-panelid');
+            $('#'+panelId).css({
+                'opacity':'0.5'
+            });
+            $('#'+panelId+' .body').html('is sexy');
+         });
+
+    });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</body>
+
+</html>

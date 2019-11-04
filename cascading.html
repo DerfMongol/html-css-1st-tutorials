@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="cascading.css" rel="stylesheet" type="text/css" />
+    <title>
+        My Webpage
+    </title>
+</head>
+
+<body>
+    <main class="center">
+        <img class="hide" id="scarlett-pic" src="https://rawmultimedia.files.wordpress.com/2015/02/scarlett-johansson-sexy-best-photos-hottest-sexiest-0.jpg" width="300" height="400"></img>
+        <img class="hide" id="alison-pic" src="http://sizzlingsuperstars.com/wp-content/uploads/2017/03/Alison-Brie-4.jpg" width="500" height="400"></img>
+        <img class="hide" id="adriana-pic" src="http://3.bp.blogspot.com/-1J_7xVTptzw/T9nTLdwzDcI/AAAAAAAAACw/s_GMSLthPzA/s1600/adriana+lima+23.jpg" width="400" height="400"></img>
+        <h4>Pictures</h4>
+        <ul>
+            <li><a data-img="scarlett-pic" id="scarlett" href="#">Scarlett Johansen</a></li>
+            <li><a data-img="alison-pic" id="alison" href="#">Alison Brie</a></li>
+            <li><a data-img="adriana-pic" id="adriana" href="#">Adriana Lima</a></li>
+        </ul>
+        <h4>Add Numbers:</h4>
+        <p>
+            <input id="num-one"> +
+            <input id="num-two">
+        </p>
+        <p id="add-sum"></p>
+        <ul id="checklist">
+            <li>
+                <span>Apples</span>
+                <input value="Apples" />
+            </li>
+            <li>
+                <span>Oranges</span>
+                <input value="Oranges" />
+            </li>
+            <li>
+                <span>Bananas</span>
+                <input value="Bananas" />
+            </li>
+        </ul>
+    </main>
+    <div id="container">
+        <button id="btnFadeOut">Fade Out</button>
+        <button id="btnFadeIn">Fade In</button>
+        <button id="btnFadeTog">Fade Toggle</button>
+        <button id="btnSlideUp">Slide Up</button>
+        <button id="btnSlideDown">Slide Down</button>
+        <button id="btnSlideTog">Slide Toggle</button>
+        <button id="btnStop">Stop</button>
+        <hr>
+        <div id="box">
+            <h2>Hello World</h2></div>
+        <hr>
+        <button id="moveLeft">Move Left</button>
+        <button id="moveRight">Move Right</button>
+        <button id="moveAround">Move Around</button>
+        <hr>
+        <div id="box2"></div>
+        <hr>
+        <form id="form">
+            <label>Name</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label>Email</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label>Gender</label><br>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <input type="submit" name="Submit">
+        </form>
+        <hr>
+        <button id="btn1">Toggle Par1</button>
+        <button id="btn2">Toggle Par2</button>
+        <button id="btn3">Toggle Both</button>
+        <button id="btn4">Dissapear</button>
+        <button id="btn5">Slow Click</button>
+    </div>
+    
+    <p class="primary">Hello World</p>
+    <p class="par1">Many users already have downloaded jQuery from Google or Microsoft when visiting another site. As a result, it will be loaded from cache when they visit your site, which leads to faster loading time. <span>Also, most CDN's will make sure that once a user requests a file from it</span>, it will be served from the server closest to them, which also leads to faster loading time.</p>
+    <p class="par2">Many users already have downloaded jQuery from Google or Microsoft when visiting another site. As a result, it will be loaded from cache when they visit your site, which leads to faster loading time. <span>Also, most CDN's will make sure that once a user requests a file from it</span>, it will be served from the server closest to them, which also leads to faster loading time.</p>
+    <h1 id="coords"></h1>
+    <ul class="list">
+        <li><a href="index.html">index</a></li>
+        <li><a href="page3.html">page3</a></li>
+        <li><a href="page2.html">page2</a></li>
+        <li><a href="bootstrap.html">bootstrap</a></li>
+    </ul>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#btnFadeOut').click(function() {
+            $('#box').fadeOut(2000, function() {
+                $('#btnFadeOut').text('It\'s gone');
+            });
+        })
+        $('#btnFadeIn').click(function() {
+            $('#box').fadeIn(2000, function() {
+                $('#btnFadeOut').text('Fade Out');
+            });
+        })
+        $('#btnFadeTog').click(function() {
+            $('#box').fadeToggle(2000);
+        });
+
+
+        $('#btnSlideUp').click(function() {
+            $('#box').slideUp(2000, function() {
+                $('#btnSlideUp').text('It\'s gone');
+            });
+        })
+        $('#btnSlideDown').click(function() {
+            $('#box').slideDown(2000, function() {
+                $('#btnSlideUp').text('Slide Up');
+            });
+
+        })
+        $('#btnSlideTog').click(function() {
+            $('#box').slideToggle(2000);
+        });
+        $('#btnStop').click(function() {
+            $('#box').stop();
+        });
+
+        $('#moveRight').click(function() {
+            $('#box2').animate({
+                left: 500,
+                height: '300px',
+                width: '300px',
+                opacity: '0.5'
+            });
+        });
+        $('#moveLeft').click(function() {
+            $('#box2').animate({
+                left: 0,
+                height: '100px',
+                width: '100px',
+                opacity: '1'
+            });
+        });
+        $('#moveRight').click(function() {
+            $('#box2').animate({
+                left: 500
+            });
+        });
+        $('#moveAround').click(function() {
+            var box = $('#box2');
+            box.animate({
+                left: 300
+            });
+            box.animate({
+                top: 300
+            });
+            box.animate({
+                left: 0,
+                top: 300
+            });
+            box.animate({
+                left: 0,
+                top: 0
+            });
+        });
+        $('p.par1').hide(2500, function() {
+            $('p span').css('color', 'red').css('font-weight', 'bold');
+
+        }).show(3000);
+        $('p.par2').hide(1000).show(2000);
+
+        $('ul.list li:odd').css('background-color', 'yellow');
+        $('ul.list li:even').css('background-color', 'orange');
+        $('ul.list').css('font-size', '150%').css('width', '25%').css('text-align', 'center');
+
+        $('#btn1').click(function() {
+            $('p.par1').toggle(500);
+        });
+        $('#btn2').click(function() {
+            $('p.par2').toggle(500);
+        });
+        $('#btn3').dblclick(function() {
+            $('p.par1').toggle(1000);
+            $('p.par2').toggle(1000);
+
+        })
+        $('#btn4').mouseenter(function() {
+            $('p.par1').toggle();
+            $('p.par2').toggle();
+
+        })
+        $('#btn5').mousedown(function() {
+            $('p.primary').toggle();
+        })
+        $('#btn5').mouseup(function() {
+            $('p.primary').toggle();
+        })
+        $(document).mousemove(function(e){
+            $('#coords').html('Coords: Y: '+e.clientY+
+                " X: "+e.clientX);
+        });
+        $('input').focus(function(){
+            $(this).css('background','pink');
+        })
+        $('input').blur(function(){
+            $(this).css('background','white');
+        })
+        $('input').keyup(function(e){
+            console.log(e.target.value);
+        })
+        $('select#gender').change(function(e){
+            alert(e.target.value);
+        })
+        $('#form').submit(function(e){
+            e.preventDefault();
+            var name = $('input#name').val();
+            console.log(name);
+        })
+
+
+    });
+    </script>
+</body>
+
+</html>
